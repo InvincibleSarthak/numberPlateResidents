@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { StyleSheet, TextInput, View, Text } from 'react-native';
+import { StyleSheet, TextInput, View, Text, BackHandler } from 'react-native';
 import { Button } from 'react-native-elements';
 const LogIn = ({ navigation }) => {
     const [number, setNumber] = useState('');
     const [name, setName] = useState('');
+    BackHandler.addEventListener("hardwareBackPress", () => { BackHandler.exitApp() });
     return (
         <>
             <View>
